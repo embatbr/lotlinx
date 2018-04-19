@@ -23,7 +23,7 @@ The Image API classifies images, provides coordinates of a box that surrounds th
 - [X] Use PHP, Python or Java to implement your solution.
 - [X] Basic error handling should be implemented, but no heroics necessary.
 - [X] The program should take the Image URLs as input, as parameters, stdin, read from file, etc.
-- [ ] API responses should be logged
+- [X] API responses should be logged
 - [ ] Provide a ZIP/archive of the program code, logged output and resulting images downloaded from the API results.
 
 Here are the image URLS:

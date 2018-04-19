@@ -1,0 +1,30 @@
+2018-04-19 01:02:15,290 - LotLinx - INFO - Starting solution.
+
+2018-04-19 01:02:15,291 - LotLinx - INFO - Credentials loaded from '/home/embat/workspace/Personal/lotlinx/inputs/credentials.json'.
+2018-04-19 01:02:15,291 - LotLinx - INFO - Images info loaded from '/home/embat/workspace/Personal/lotlinx/inputs/images.json'.
+
+2018-04-19 01:02:15,291 - LotLinx - INFO - Ready to request.
+
+2018-04-19 01:02:15,291 - LotLinx - INFO - state: SUBMIT_REQUESTS
+2018-04-19 01:02:15,291 - LotLinx - INFO - Submitting requests to 'https://photoai.lotlinx.com/images/optimize'.
+2018-04-19 01:02:16,105 - LotLinx - INFO - HTTP response: b'{"data":[{"token":"2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh","status":"queued"}],"status":200}'
+2018-04-19 01:02:16,106 - LotLinx - INFO - State changed to 'CHECK_STATUS'
+2018-04-19 01:02:16,106 - LotLinx - INFO - request_status: queued
+2018-04-19 01:02:16,107 - LotLinx - INFO - token: 2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh
+2018-04-19 01:02:16,107 - LotLinx - INFO - Request queued. Sleeping for a minute.
+2018-04-19 01:03:16,165 - LotLinx - INFO - Checking status at 'https://photoai.lotlinx.com/images/2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh/status'.
+2018-04-19 01:03:26,959 - LotLinx - INFO - HTTP response: b'{"meta":{"url":"http://photoai.lotlinx.com/images/2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh"},"data":[{"token":"2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh","status":"complete"}],"status":200}'
+2018-04-19 01:03:26,961 - LotLinx - INFO - state: CHECK_STATUS
+2018-04-19 01:03:26,961 - LotLinx - INFO - request_status: complete
+2018-04-19 01:03:26,961 - LotLinx - INFO - token: 2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh
+2018-04-19 01:03:26,961 - LotLinx - INFO - Loading response from 'https://photoai.lotlinx.com/images/2kgqxUN7caub1ZSjygn2i68P0rEo6JV5Rw6g7LzjqFAfYS7v9r5sUsVCiid704Xh'.
+2018-04-19 01:03:27,781 - LotLinx - INFO - HTTP response: b'{"data":[{"dealerId":1,"vehicles":[{"id":7416,"images":[{"imageId":0,"imageUrl":"https://img.lotlinx.com/vdn/7416/jeep_wrangler%20unlimited_2014_1C4BJWFG3EL326863_7416_339187295.jpg","modifiedUrl":"http://lotlinx-ml-images.s3.amazonaws.com/front_3_quarter/jeep_wrangler%2520unlimited_2014_1C4BJWFG3EL326863_7416_339187295.png","classification":"front_3_quarter","color":[46,15,46],"points":[[118,383],[925,730]]},{"imageId":1,"imageUrl":"https://img.lotlinx.com/vdn/7416/jeep_wrangler%20unlimited_2014_1C4BJWFG3EL326863_7416_2_339187295.jpg","modifiedUrl":"http://lotlinx-ml-images.s3.amazonaws.com/front/jeep_wrangler%2520unlimited_2014_1C4BJWFG3EL326863_7416_2_339187295.png","classification":"front","color":[174,174,142],"points":[[591,194],[1060,608]]},{"imageId":2,"imageUrl":"https://img.lotlinx.com/vdn/7416/jeep_wrangler%20unlimited_2014_1C4BJWFG3EL326863_7416_3_339187295.jpg","modifiedUrl":"http://lotlinx-ml-images.s3.amazonaws.com/side/jeep_wrangler%2520unlimited_2014_1C4BJWFG3EL326863_7416_3_339187295.png","classification":"side","color":[110,46,46],"points":[[114,102],[891,431]]},{"imageId":3,"imageUrl":"https://img.lotlinx.com/vdn/7416/jeep_wrangler%20unlimited_2014_1C4BJWFG3EL326863_7416_4_339187295.jpg","modifiedUrl":"http://lotlinx-ml-images.s3.amazonaws.com/side/jeep_wrangler%2520unlimited_2014_1C4BJWFG3EL326863_7416_4_339187295.png","classification":"side","color":[15,15,46],"points":[[72,152],[912,507]]},{"imageId":4,"imageUrl":"https://img.lotlinx.com/vdn/7416/jeep_wrangler%20unlimited_2014_1C4BJWFG3EL326863_7416_5_339187295.jpg","modifiedUrl":"http://lotlinx-ml-images.s3.amazonaws.com/side/jeep_wrangler%2520unlimited_2014_1C4BJWFG3EL326863_7416_5_339187295.png","classification":"side","color":[15,15,46],"points":[[55,106],[959,503]]}]}]}],"status":200}'
+2018-04-19 01:03:27,783 - LotLinx - INFO - Description of optimized images saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_images.json'.
+2018-04-19 01:03:31,305 - LotLinx - INFO - Image 0 saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_image_0.png'.
+2018-04-19 01:03:35,152 - LotLinx - INFO - Image 1 saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_image_1.png'.
+2018-04-19 01:03:41,254 - LotLinx - INFO - Image 2 saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_image_2.png'.
+2018-04-19 01:03:43,852 - LotLinx - INFO - Image 3 saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_image_3.png'.
+2018-04-19 01:03:47,817 - LotLinx - INFO - Image 4 saved in file '/home/embat/workspace/Personal/lotlinx/outputs/optimized_image_4.png'.
+2018-04-19 01:03:47,818 - LotLinx - INFO - All images saved.
+
+2018-04-19 01:03:47,819 - LotLinx - INFO - Finished.
