@@ -14,8 +14,8 @@ SLEEP_TIME = 60
 
 BASE_URL = 'https://photoai.lotlinx.com'
 
-DEALER_ID = 1
-VEHICLE_ID = 7416
+DEALER_ID = 1       # arbitrary
+VEHICLE_ID = 7416   # arbitrary
 
 
 def submit_requests(auth, images):
@@ -53,10 +53,10 @@ def load_response(auth, token):
 
 
 if __name__ == '__main__':
-    credentials = json.load(open('%s/solution/credentials.json' % PROJECT_ROOT_PATH))
+    credentials = json.load(open('%s/inputs/credentials.json' % PROJECT_ROOT_PATH))
     auth = HTTPBasicAuth(credentials['username'], credentials['password'])
 
-    images = json.load(open('%s/solution/images.json' % PROJECT_ROOT_PATH))
+    images = json.load(open('%s/inputs/images.json' % PROJECT_ROOT_PATH))
 
     state = 'submit_requests'
     status_code = None
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
         if state == 'check_status':
             if status_code != 200:
-                raise Exception('%s %s' % (status_code, resp.json()['meta']['errorMsg']))
+                raise Exception('%s - %s' % (status_code, resp.json()['meta']['errorMsg']))
             else:
                 body = resp.json()['data'][0]
                 request_status = body['status']
@@ -97,4 +97,16 @@ if __name__ == '__main__':
                     resp = check_status(auth, token)
 
     if optimized_images:
-        print(json.dumps(optimized_images, indent=4))
+        if not os.path.exists('%s/outputs' % PROJECT_ROOT_PATH):
+            os.makedirs('%s/outputs' % PROJECT_ROOT_PATH)
+
+        with open('%s/outputs/optimized_images.json' % PROJECT_ROOT_PATH, 'w') as file:
+            json.dump(optimized_images, file, indent=4)
+
+        for image in optimized_images:
+            image_id = image['imageId']
+            modified_url = image['modifiedUrl']
+
+            resp = r.get(modified_url, allow_redirects=True)
+            with open('%s/outputs/optimized_image_%d.png' % (PROJECT_ROOT_PATH, image_id), 'wb') as file:
+                file.write(resp.content)

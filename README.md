@@ -6,11 +6,11 @@ Given the provided URLs to images of vehicles and the API documentation please c
 
 The Image API classifies images, provides coordinates of a box that surrounds the primary vehicle in the image and enhances the image by blurring the background to highlight the primary vehicle.
 
-- Use PHP, Python or Java to implement your solution.
-- Basic error handling should be implemented, but no heroics necessary.
-- The program should take the Image URLs as input, as parameters, stdin, read from file, etc.
-- API responses should be logged
-- Provide a ZIP/archive of the program code, logged output and resulting images downloaded from the API results.
+- [X] Use PHP, Python or Java to implement your solution.
+- [X] Basic error handling should be implemented, but no heroics necessary.
+- [X] The program should take the Image URLs as input, as parameters, stdin, read from file, etc.
+- [ ] API responses should be logged
+- [ ] Provide a ZIP/archive of the program code, logged output and resulting images downloaded from the API results.
 
 Here are the image URLS:
 
