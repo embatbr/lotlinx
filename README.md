@@ -1,5 +1,19 @@
 # LotLinx
 
+This directory is also a git repository. See the hidden directory and file *.git* and *.gitignore*.
+
+The project was written using Ubuntu 16.04.
+
+## Requirements
+
+- Python 3.5 (I cannot guarantee a previous version will execute correctly).
+- Modules `json`, `os`, `requests`, `time`, all provided by the Python installation.
+
+## Execution
+
+- Provide a JSON file *credentials.json* inside directory *inputs* with fields `username` and `password` filled with the correct data.
+- Run the bash file *startup.sh*.
+
 ## Problem description
 
 Given the provided URLs to images of vehicles and the API documentation please construct a request to submit the images to the API using the credentials given, poll for job completion and get the results from the finished job.
